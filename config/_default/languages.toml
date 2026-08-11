@@ -2,14 +2,14 @@
   languageName = "English"
   languageCode = "en"
   weight = 2
-  title = "Chirpy"
+  title = "Eturnip.com"
   [en.params]
-    tagline = "A text-focused blog theme"
+    tagline = "Just Some Words and Pictures"
 
 [zh-CN]
   languageName = "中文"
   languageCode = "zh-CN"
   weight = 1
-  title = "Chirpy"
+  title = "Eturnip.com"
   [zh-CN.params]
-    tagline = "一个专注于文本的博客主题"
+    tagline = "一些文字和图片"

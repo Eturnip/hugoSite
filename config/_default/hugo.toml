@@ -1,7 +1,7 @@
 # The base URL for the site.
-baseURL = 'https://geekifan.github.io/chirpy-starter/'
+baseURL = 'https://eturnip.com'
 # The title of the site.
-title = 'Chirpy'
+title = 'Eturnip.com'
 # Enable Git info › https://gohugo.io/methods/page/gitinfo/
 enableGitInfo = false
 # The default content language.
