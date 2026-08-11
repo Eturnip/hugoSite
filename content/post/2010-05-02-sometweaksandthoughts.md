@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2010-05-02T00:00:00Z"
 title: some tweaks and thoughts
+author: Owen McManus
 ---
 
 <div class="blog-content">
@@ -9,3 +10,6 @@ title: some tweaks and thoughts
 
 		</div>
         
+
+
+

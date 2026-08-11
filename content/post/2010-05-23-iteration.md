@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2010-05-23T00:00:00Z"
 title: iteration
+author: Owen McManus
 ---
 
 <div class="blog-content">
@@ -9,3 +10,6 @@ title: iteration
 
 		</div>
         
+
+
+

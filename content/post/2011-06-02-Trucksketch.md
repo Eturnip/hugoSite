@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2011-06-02T00:00:00Z"
 title: Truck sketch
+author: Owen McManus
 ---
 
 <div class="blog-content">
@@ -9,3 +10,6 @@ title: Truck sketch
 
 		</div>
         
+
+
+

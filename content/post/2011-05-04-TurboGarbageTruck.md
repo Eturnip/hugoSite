@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2011-05-04T00:00:00Z"
 title: TurboGarbageTruck
+author: Owen McManus
 ---
 
 <div class="blog-content">
@@ -9,3 +10,6 @@ title: TurboGarbageTruck
 
 		</div>
         
+
+
+

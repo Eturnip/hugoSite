@@ -1,15 +1,7 @@
 [en]
   languageName = "English"
   languageCode = "en"
-  weight = 2
+  weight = 1
   title = "Eturnip.com"
   [en.params]
     tagline = "Just Some Words and Pictures"
-
-[zh-CN]
-  languageName = "中文"
-  languageCode = "zh-CN"
-  weight = 1
-  title = "Eturnip.com"
-  [zh-CN.params]
-    tagline = "一些文字和图片"

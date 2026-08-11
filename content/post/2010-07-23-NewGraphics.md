@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2010-07-23T00:00:00Z"
 title: New Graphics
+author: Owen McManus
 ---
 
 <div class="blog-content">
@@ -9,3 +10,6 @@ title: New Graphics
 
 		</div>
         
+
+
+

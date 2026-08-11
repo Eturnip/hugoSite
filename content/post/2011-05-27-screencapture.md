@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2011-05-27T00:00:00Z"
 title: screen capture
+author: Owen McManus
 ---
 
 <div class="blog-content">
@@ -9,3 +10,6 @@ title: screen capture
 
 		</div>
         
+
+
+

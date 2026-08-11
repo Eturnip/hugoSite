@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2010-10-22T00:00:00Z"
 title: Randomization
+author: Owen McManus
 ---
 
   
@@ -26,5 +27,8 @@ Next up
 Engagement  
   
  
+
+
+
 
 

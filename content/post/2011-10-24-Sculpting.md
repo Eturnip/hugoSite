@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2011-10-24T00:00:00Z"
 title: Sculpting
+author: Owen McManus
 ---
 
 <div class="blog-content">
@@ -9,3 +10,6 @@ title: Sculpting
 
 		</div>
         
+
+
+

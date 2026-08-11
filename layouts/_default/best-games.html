@@ -1,0 +1,48 @@
+{{ define "main" }}
+  {{ $allPosts := where site.RegularPages "Section" "post" }}
+  {{ $pages := slice }}
+  {{ range $allPosts }}
+    {{ $hasTag := false }}
+    {{ if .Params.tags }}
+      {{ range .Params.tags }}
+        {{ $normalized := lower (strings.TrimSpace (string .)) }}
+        {{ if eq $normalized "best_games" }}
+          {{ $hasTag = true }}
+        {{ end }}
+        {{ if eq $normalized "- best_games" }}
+          {{ $hasTag = true }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if and (not $hasTag) .Params.tag }}
+      {{ $normalized := lower (strings.TrimSpace (string .Params.tag)) }}
+      {{ if eq $normalized "best_games" }}
+        {{ $hasTag = true }}
+      {{ end }}
+      {{ if eq $normalized "- best_games" }}
+        {{ $hasTag = true }}
+      {{ end }}
+    {{ end }}
+    {{ if $hasTag }}
+      {{ $pages = $pages | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $pages = sort $pages "Date" "desc" }}
+
+  <div id="page-tag">
+    <h1 class="ps-lg-2">
+      <i class="fa fa-trophy fa-fw text-muted"></i>
+      Best Games
+      <span class="lead text-muted ps-2">{{ len $pages }}</span>
+    </h1>
+    <ul class="content ps-0">
+      {{ range $pages }}
+        <li class="d-flex justify-content-between px-md-3">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <span class="dash flex-grow-1"></span>
+          {{ partial "datetime.html" (dict "date" .Date "class" "text-muted small text-nowrap") }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

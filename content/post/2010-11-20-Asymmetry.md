@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2010-11-20T00:00:00Z"
 title: Asymmetry
+author: Owen McManus
 ---
 
 previous posts in this series  
@@ -25,5 +26,8 @@ Maybe I should change my terminology. It is probably not so important that space
 Having this perpetual digital soup can available for the beating, changed game design. Ideas that you would never be able to get a team of real humans to rally behind, became the norm for video games. The next time you have a bunch of people around getting ready to play, soccer, hockey, baseball, football... or really any other sport, ask them if they would all rather line up and run straight at you while you punch them, one at a time, in the nose and crotch. They will probably tell you that idea doesn't sound like much fun. Then ask a computer. Computers are always up for it.  
   
  
+
+
+
 
 

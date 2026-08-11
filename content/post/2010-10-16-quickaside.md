@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2010-10-16T00:00:00Z"
 title: quick aside
+author: Owen McManus
 ---
 
 <div class="blog-content">
@@ -9,3 +10,6 @@ title: quick aside
 
 		</div>
         
+
+
+

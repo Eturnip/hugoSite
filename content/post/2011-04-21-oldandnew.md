@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2011-04-21T00:00:00Z"
 title: old and new
+author: Owen McManus
 ---
 
 <div class="blog-content">
@@ -9,3 +10,6 @@ title: old and new
 
 		</div>
         
+
+
+

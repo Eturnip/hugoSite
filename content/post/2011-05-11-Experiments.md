@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2011-05-11T00:00:00Z"
 title: Experiments
+author: Owen McManus
 ---
 
 <div class="blog-content">
@@ -9,3 +10,6 @@ title: Experiments
 
 		</div>
         
+
+
+

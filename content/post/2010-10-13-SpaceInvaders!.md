@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2010-10-13T00:00:00Z"
 title: Space Invaders!
+author: Owen McManus
 ---
 
 [Space Invaders](http://en.wikipedia.org/wiki/Space_Invaders)  
@@ -18,5 +19,8 @@ next time on games by mistake
   
 **Randomization**  
  
+
+
+
 
 

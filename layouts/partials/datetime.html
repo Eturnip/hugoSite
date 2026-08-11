@@ -1,0 +1,7 @@
+{{- $date := .date -}}
+{{- if not $date -}}
+  {{- return -}}
+{{- end -}}
+{{- $value := time.AsTime $date -}}
+{{- $formatted := $value.Format "Jan 2, 2006" -}}
+<span class="{{ .class | default "text-muted small text-nowrap" }}">{{ $formatted }}</span>

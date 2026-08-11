@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2010-10-31T00:00:00Z"
 title: Engagement
+author: Owen McManus
 ---
 
 previous posts in this series
@@ -39,3 +40,6 @@ Randomization = Play
 Randomization + Engagement = Game
 
 I have one more element to cover. Asymmetry. Games don't require asymmetry, but Space Invaders does. I'm going to attempt to cover why asymmetry is the basis for modern video games, and why it's what makes video games different from most other forms of game. My post on engagement went way longer than I had hoped ( and still barely covers the topic ), so I'll save asymmetry for next time.
+
+
+

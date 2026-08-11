@@ -2,6 +2,7 @@
 categories: ["Blog"]
 date: "2010-05-14T00:00:00Z"
 title: new build and remembering activision
+author: Owen McManus
 ---
 
 <div class="blog-content">
@@ -9,3 +10,6 @@ title: new build and remembering activision
 
 		</div>
         
+
+
+
