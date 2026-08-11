@@ -8,8 +8,7 @@ description: >-
 categories:
   - 博客
   - 教程
-tags:
-  - 入门指南
+tags: ["- 入门指南"]
 pin: true
 ---
 
@@ -156,3 +155,4 @@ $ JEKYLL_ENV=production bundle exec jekyll b
 [dev-containers]: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
 [dc-clone-in-vol]: https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume
 [dc-open-in-container]: https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container 
+

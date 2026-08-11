@@ -4,8 +4,7 @@ date: 2019-08-08 14:10:00 +0800
 categories:
   - Blogging
   - Tutorial
-tags:
-  - writing
+tags: ["- writing"]
 ---
 
 
@@ -465,3 +464,5 @@ Then you can use it like other markdown languages: surround the graph code with 
 ## Learn More
 
 For more knowledge about writing Hugo posts, visit the [Hugo Documentation](https://gohugo.io/documentation/).
+
+

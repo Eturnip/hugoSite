@@ -4,8 +4,7 @@ date: 2019-08-08 14:10:00 +0800
 categories:
   - 博客
   - 教程
-tags:
-  - 写作
+tags: ["- 写作"]
 ---
 
 本教程将指导您如何在 _Chirpy_ 模板中撰写文章，即使您以前使用过 Hugo，也值得阅读，因为许多功能需要设置特定变量。
@@ -460,3 +459,4 @@ mermaid: true
 ## 了解更多
 
 要了解更多关于撰写 Hugo 文章的知识，请访问 [Hugo 文档](https://gohugo.io/documentation/)。 
+

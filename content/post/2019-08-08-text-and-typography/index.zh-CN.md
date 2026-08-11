@@ -7,8 +7,7 @@ description: >-
 categories:
   - 博客
   - 演示
-tags:
-  - 排版
+tags: ["- 排版"]
 pin: true
 math: true
 image:
@@ -191,3 +190,4 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 [^footnote]: 脚注源
 [^fn-nth-2]: 第二个脚注源 
+

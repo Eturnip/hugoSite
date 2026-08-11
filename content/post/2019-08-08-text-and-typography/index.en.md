@@ -7,8 +7,7 @@ description: >-
 categories:
   - Blogging
   - Demo
-tags:
-  - typography
+tags: ["- typography"]
 pin: true
 math: true
 image:
@@ -192,3 +191,5 @@ The image below will toggle dark/light mode based on theme preference, notice it
 
 [^footnote]: The footnote source
 [^fn-nth-2]: The 2nd footnote source
+
+
