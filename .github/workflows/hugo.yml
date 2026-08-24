@@ -23,6 +23,7 @@ jobs:
       GO_VERSION: 1.26.5
       HUGO_VERSION: 0.165.0
       NODE_VERSION: 24.19.0
+      HUGO_BASE_URL: https://eturnip.com/
 
       # Set the build time zone
       TZ: America/Mountain
@@ -123,7 +124,7 @@ jobs:
             --gc \
             --minify \
             --cleanDestinationDir \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --baseURL "${HUGO_BASE_URL}" \
             --cacheDir "${{ runner.temp }}/.cache/hugo"
 
       - name: Cache save
