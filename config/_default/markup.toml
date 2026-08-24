@@ -1,24 +1,26 @@
-# Code highlighting settings.
+# -- Markup --
+# These settings are required for the theme to function.
+
+[goldmark]
+  [goldmark.parser]
+    wrapStandAloneImageWithinParagraph = false
+
+    [goldmark.parser.attribute]
+      block = true
+
+  [goldmark.renderer]
+    unsafe = true
+
+  [goldmark.extensions]
+    [goldmark.extensions.passthrough]
+      enable = true
+      [goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
+
 [highlight]
-  anchorLineNos = false
-  codeFences = true
-  guessSyntax = true
-  hl_Lines = ''
-  hl_inline = false
-  lineAnchors = ''
-  lineNoStart = 1
-  lineNos = true
-  lineNumbersInTable = true
   noClasses = false
-  tabWidth = 4
-  wrapperClass = 'highlight'
 
-[goldmark.parser]
-  wrapStandAloneImageWithinParagraph = false
-
-[goldmark.parser.attribute]
-  block = true
-  title = true
-
-[goldmark.renderer]
-  unsafe = true
+[tableOfContents]
+  startLevel = 2
+  endLevel = 4
