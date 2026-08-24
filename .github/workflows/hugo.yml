@@ -112,12 +112,17 @@ jobs:
           key: hugo-${{ github.run_id }}
           restore-keys: hugo-
 
+      - name: Clean previous output
+        run: |
+          rm -rf public
+
       - name: Build
         run: |
           echo "Building the project..."
           hugo build \
             --gc \
             --minify \
+            --cleanDestinationDir \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/.cache/hugo"
 
