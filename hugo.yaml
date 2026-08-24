@@ -1,4 +1,6 @@
-baseURL: https://eturnip.com
+baseURL: /
 disablePathToLower: true
 locale: en-US
 title: Eturnip.com
+relativeURLs: true
+canonifyURLs: false

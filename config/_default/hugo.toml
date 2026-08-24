@@ -3,7 +3,9 @@
 # https://github.com/CaiJimmy/hugo-theme-stack
 
 theme = "hugo-theme-stack"
-# baseURL = "https://your_domain.com/"
+baseURL = "/"
+relativeURLs = true
+canonifyURLs = false
 defaultContentLanguage = "en"
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
