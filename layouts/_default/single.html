@@ -1,52 +1,95 @@
-{{ define "main" }}
-  {{ if eq .RelPermalink "/best-games/" }}
-    {{ $allPosts := where site.RegularPages "Section" "post" }}
-    {{ $pages := slice }}
-    {{ range $allPosts }}
-      {{ $hasTag := false }}
-      {{ if .Params.tags }}
-        {{ range .Params.tags }}
-          {{ $normalized := lower (strings.TrimSpace (string .)) }}
-          {{ if eq $normalized "best_games" }}
-            {{ $hasTag = true }}
-          {{ end }}
-          {{ if eq $normalized "- best_games" }}
-            {{ $hasTag = true }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
-      {{ if and (not $hasTag) .Params.tag }}
-        {{ $normalized := lower (strings.TrimSpace (string .Params.tag)) }}
-        {{ if eq $normalized "best_games" }}
-          {{ $hasTag = true }}
-        {{ end }}
-        {{ if eq $normalized "- best_games" }}
-          {{ $hasTag = true }}
-        {{ end }}
-      {{ end }}
-      {{ if $hasTag }}
-        {{ $pages = $pages | append . }}
-      {{ end }}
-    {{ end }}
-    {{ $pages = sort $pages "Date" "desc" }}
+{{ define "body-class" }}
+    article-page
+    {{/*
+        Enable the right sidebar if
+            - Widget different from 'TOC' is enabled
+            - TOC is enabled and not empty
+    */}}
+    {{- $HasWidgetNotTOC := false -}}
+    {{- $TOCWidgetEnabled := false -}}
+    {{- range .Site.Params.widgets.page -}}
+        {{- if ne .type "toc" -}}
+            {{ $HasWidgetNotTOC = true -}}
+        {{- else -}}
+            {{ $TOCWidgetEnabled = true -}}
+        {{- end -}}
+    {{- end -}}
 
-    <div id="page-tag">
-      <h1 class="ps-lg-2">
-        <i class="fa fa-trophy fa-fw text-muted"></i>
-        Best Games
-        <span class="lead text-muted ps-2">{{ len $pages }}</span>
-      </h1>
-      <ul class="content ps-0">
-        {{ range $pages }}
-          <li class="d-flex justify-content-between px-md-3">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <span class="dash flex-grow-1"></span>
-            {{ partial "datetime.html" (dict "date" .Date "class" "text-muted small text-nowrap") }}
-          </li>
+    {{- $TOCEnabled := and (default .Site.Params.article.toc .Params.toc) $TOCWidgetEnabled -}}
+    {{- $hasTOC := ge (len .TableOfContents) 100 -}}
+    {{- .Scratch.Set "TOCEnabled" (and $TOCEnabled $hasTOC) -}}
+
+    {{- .Scratch.Set "hasWidget" (or $HasWidgetNotTOC (and $TOCEnabled $hasTOC)) -}}
+{{ end }}
+
+{{ define "main" }}
+    {{ if eq .RelPermalink "/best-games/" }}
+        {{ $allPosts := where site.RegularPages "Section" "post" }}
+        {{ $pages := slice }}
+        {{ range $allPosts }}
+            {{ $hasTag := false }}
+            {{ if .Params.tags }}
+                {{ range .Params.tags }}
+                    {{ $normalized := lower (strings.TrimSpace (string .)) }}
+                    {{ if eq $normalized "best_games" }}
+                        {{ $hasTag = true }}
+                    {{ end }}
+                    {{ if eq $normalized "- best_games" }}
+                        {{ $hasTag = true }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+            {{ if and (not $hasTag) .Params.tag }}
+                {{ $normalized := lower (strings.TrimSpace (string .Params.tag)) }}
+                {{ if eq $normalized "best_games" }}
+                    {{ $hasTag = true }}
+                {{ end }}
+                {{ if eq $normalized "- best_games" }}
+                    {{ $hasTag = true }}
+                {{ end }}
+            {{ end }}
+            {{ if $hasTag }}
+                {{ $pages = $pages | append . }}
+            {{ end }}
         {{ end }}
-      </ul>
-    </div>
-  {{ else }}
-    {{ .Content }}
-  {{ end }}
+        {{ $pages = sort $pages "Date" "desc" }}
+
+        <div id="page-tag">
+            <h1 class="ps-lg-2">
+                <i class="fa fa-trophy fa-fw text-muted"></i>
+                Best Games
+                <span class="lead text-muted ps-2">{{ len $pages }}</span>
+            </h1>
+            <ul class="content ps-0">
+                {{ range $pages }}
+                    <li class="d-flex justify-content-between px-md-3">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        <span class="dash flex-grow-1"></span>
+                        {{ partial "datetime.html" (dict "date" .Date "class" "text-muted small text-nowrap") }}
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    {{ else }}
+        {{ partial "article/article.html" . }}
+
+        {{ if .Params.links }}
+            {{ partial "article/components/links" . }}
+        {{ end }}
+
+        {{ partial "article/components/related-content" . }}
+
+        {{ if not (eq .Params.comments false) }}
+            {{ partial "comments/include" . }}
+        {{ end }}
+
+        {{ partialCached "footer/footer" . }}
+
+        {{ partialCached "article/components/photoswipe" . }}
+        {{ partial "article/components/mermaid" . }}
+    {{ end }}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ if .Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" . "Scope" "page") }}{{ end}}
 {{ end }}
