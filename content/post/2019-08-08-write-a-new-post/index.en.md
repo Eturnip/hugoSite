@@ -242,9 +242,7 @@ Knowing these prerequisites, you can start setting the image's attribute:
 
 ```yaml
 ---
-image:
-  path: /path/to/image
-  alt: image alternative text
+image: /path/to/image
 ---
 ```
 

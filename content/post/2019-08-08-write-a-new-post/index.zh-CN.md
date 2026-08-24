@@ -239,9 +239,7 @@ comments: false
 
 ```yaml
 ---
-image:
-  path: /path/to/image
-  alt: 图片替代文本
+image: /path/to/image
 ---
 ```
 
