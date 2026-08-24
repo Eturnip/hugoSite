@@ -7,6 +7,10 @@ favicon        = "img/avatar.png"
 [footer]
     since = 2020
 
+[dateFormat]
+    published = ":date_full"
+    lastUpdated = ":date_full"
+
 [sidebar]
     emoji    = "✏️"
     subtitle = "A personal blog about games and code"
