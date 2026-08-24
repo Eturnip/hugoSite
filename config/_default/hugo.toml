@@ -2,7 +2,7 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://github.com/CaiJimmy/hugo-theme-stack
 
-theme = "hugo-theme-stack-4.0.3"
+theme = "hugo-theme-stack"
 # baseURL = "https://your_domain.com/"
 defaultContentLanguage = "en"
 
