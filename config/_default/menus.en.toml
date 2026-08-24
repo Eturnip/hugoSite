@@ -17,7 +17,7 @@
 
 [[main]]
   name = "Best Games"
-  url = "/best-games/"
+  pageRef = "best-games"
   weight = 2
   pre = "fa-ranking-star"
 
