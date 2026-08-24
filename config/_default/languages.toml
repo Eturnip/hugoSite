@@ -1,6 +1,6 @@
 [en]
-  languageName = "English"
-  languageCode = "en"
+  label = "English"
+  locale = "en-US"
   weight = 1
   title = "Eturnip.com"
   [en.params]
