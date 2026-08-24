@@ -1,222 +1,27 @@
----
-title: Writing a New Post
-date: 2019-08-08 14:10:00 +0800
-categories:
-  - Blogging
-  - Tutorial
-tags: ["- writing"]
----
-
-
-This tutorial will guide you how to write a post in the _Chirpy_ template, and it's worth reading even if you've used Hugo before, as many features require specific variables to be set.
-
-## Naming and Path
-
-Create a new file using `hugo new content/post/YYYY-MM-DD-TITLE.md`. You can change the path as you like, but note that all the posts should be placed in {{< filepath src="content/post" >}} of the root directory.
-
-## Front Matter
-
-Basically, you need to fill the [Front Matter](https://gohugo.io/content-management/front-matter/) as below at the top of the post:
-
-```yaml
----
-title: TITLE
-date: YYYY-MM-DD HH:MM:SS +/-TTTT
-draft: true
----
-```
-
-You can add the following fields as needed:
-```yaml
-categories: [TOP_CATEGORY, SUB_CATEGORY] # only two categories are supported
-tags: [TAG]     # TAG names should always be lowercase
-pin: true      # it means this post will show at the top of the home page.
-description: Hello, World! # description of this post
-```
-
-> The posts' _layout_ has been set to `post` by default, so there is no need to add the variable _layout_ in the Front Matter block.
-{ .prompt-tip }
-
-### Categories and Tags
-
-The `categories` of each post are designed to contain up to two elements, and the number of elements in `tags` can be zero to infinity. For instance:
-
-```yaml
----
 categories: [Animal, Insect]
 tags: [bee]
----
-```
-
-### Author Information
-
-The author information of the post usually does not need to be filled in the _Front Matter_ , they will be obtained from variables `social.name` and the first entry of `social.links` of the configuration file by default. But you can also override it as follows:
-
-Adding author information in `data/authors.yaml` (If your website doesn't have this file, don't hesitate to create one).
-
-```yaml { file="data/authors.yml" }
-<author_id>:
-  name: <full name>
-  url: <homepage_of_author>
-```
-
-And then use `author` to specify a single entry or `authors` to specify multiple entries:
-
-```yaml
----
 author: <author_id>                     # for single entry
-# or
 authors: [<author1_id>, <author2_id>]   # for multiple entries
----
-```
-
-If you don't want to specify the author in the frontmatter of every article, you can set a global author in {{< filepath src="config/_default/params.toml" >}}.
-
-```yaml { file="config/_default/params.toml" }
-author: <author_id>
-```
-
-> The author specified in each article's frontmatter will override the global author setting. So if any article has a different author than the global one, feel free to add the author directly in its frontmatter.
-{ .prompt-info }
-
-To support multilingual author information on an i18n-enabled site, you can organize author data in language-specific YAML files under {{< filepath src="data/authors/" >}}. For instance:
-
-- English: {{< filepath src="data/authors/en.yaml" >}}
-- Simplified Chinese: {{< filepath src="data/authors/zh-CN.yaml" >}}
-
-Simply populate each file with the respective author details:
-
-```yaml { file=" data/authors/en.yaml" }
-<author_id>:
-  name: <author_name_en>
-  url: <homepage_of_author>
-```
-
-```yaml { file=" data/authors/zh-CN.yaml" }
-<author_id>:
-  name: <author_name_zh_CN>
-  url: <homepage_of_author>
-```
-
-### Post Description
-
-By default, the first words of the post are used to display on the home page for a list of posts, in the _Further Reading_ section, and in the XML of the RSS feed. If you don't want to display the auto-generated description for the post, you can customize it using the `description` field in the _Front Matter_ as follows:
-
-```yaml
----
 description: Short summary of the post.
----
-```
-
-Additionally, the `description` text will also be displayed under the post title on the post's page.
-
-## Table of Contents
-
-By default, the **T**able **o**f **C**ontents (TOC) is displayed on the right panel of the post. If you want to turn it off globally, go to {{< filepath src="config/_default/params.toml" >}} and set the value of variable `toc` to `false`. If you want to turn off TOC for a specific post, add the following to the post's [Front Matter](https://gohugo.io/content-management/front-matter/):
-
-```yaml
----
 toc: false
 ---
-```
-
-## Comments
-
-The global setting for comments is defined by the `comments.provider` option in the {{< filepath src="config/_default/params.toml" >}} file. Once a comment system is selected for this variable, comments will be enabled for all posts.
-
-If you want to close the comment for a specific post, add the following to the **Front Matter** of the post:
-
-```yaml
+title: Writing notes in public
+date: 2019-08-08
+categories:
+  - Writing
+tags:
+  - process
 ---
-comments: false
----
-```
 
-## Media
+This is a placeholder post to remove the old starter-template copy from the site and keep the content focused on the actual blog.
 
-We refer to images, audio and video as media resources in _Chirpy_.
+In practice, the writing here is meant to capture experiments, project notes, and small lessons from iteration.
 
-### URL Prefix
+## The goal
 
-> URL prefix is under development.
-{ .prompt-warning }
-
-From time to time we have to define duplicate URL prefixes for multiple resources in a post, which is a boring task that you can avoid by setting two parameters.
-
-- If you are using a CDN to host media files, you can specify the `cdn` in {{< filepath src="config/_default/params.toml" >}}. The URLs of media resources for site avatar and posts are then prefixed with the CDN domain name.
-
-  ```yaml  { file="config/_default/params.toml" }
-  cdn: https://cdn.com
-  ```
-
-
-- To specify the resource path prefix for the current post/page range, set `media_subpath` in the _front matter_ of the post:
-
-  ```yaml
-  ---
-  media_subpath: /path/to/media/
-  ---
-  ```
-
-The option `site.cdn` and `page.media_subpath` can be used individually or in combination to flexibly compose the final resource URL: `[site.cdn/][page.media_subpath/]file.ext`
-
-### Images
-
-#### Caption
-
-Add an html attribute `caption` to the next line of an image, then it will become the caption and appear at the bottom of the image:
-
-```markdown
-![img-description](/path/to/image)
-{ caption="Your caption of images" }
-```
-
-#### Size
-
-To prevent the page content layout from shifting when the image is loaded, we should set the width and height for each image.
-
-```markdown
-![Desktop View](/assets/img/sample/mockup.png)
-{ width="700" height="400" }
-```
-
-> For an SVG, you have to at least specify its _width_, otherwise it won't be rendered.
-{ .prompt-info }
-
-
-#### Position
-
-By default, the image is centered, but you can specify the position by using one of the classes `normal`, `left`, and `right`.
-
-> Once the position is specified, the image caption should not be added.
-{ .prompt-warning }
-
-- **Normal position**
-
-  Image will be left aligned in below sample:
-
-  ```markdown
-  ![Desktop View](/assets/img/sample/mockup.png)
-  { .normal }
-  ```
-
-- **Float to the left**
-
-  ```markdown
-  ![Desktop View](/assets/img/sample/mockup.png)
-  { .left }
-  ```
-
-- **Float to the right**
-
-  ```markdown
-  ![Desktop View](/assets/img/sample/mockup.png)
-  { .right }
-  ```
-
-#### Dark/Light mode
-
-You can make images follow theme preferences in dark/light mode. This requires you to prepare two images, one for dark mode and one for light mode, and then assign them a specific class (`dark` or `light`):
+- keep notes in a readable format
+- record what changed and why
+- make the work easier to revisit later
 
 ```markdown
 ![Light mode only](/path/to/light-mode.png)
