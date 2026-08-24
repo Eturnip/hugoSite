@@ -54,9 +54,9 @@
         {{ range .Site.Menus.main }}
         {{ $active := or (eq $currentPage.RelPermalink .URL) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
         {{ $href := .URL }}
-        {{ if and (eq .Name "Best Games") (or (eq .URL "/best-games/") (eq .URL "/best-games")) }}
-            {{ $href = "/tags/best_games/" }}
-        {{ end }}
+        {{- if eq .Name "Best Games" }}
+            {{- $href = "/best-games/" }}
+        {{- end }}
         <li {{ if $active }} class='current'{{ end }}>
             <a href='{{ $href }}' {{ if .Params.newTab }}target="_blank"{{ end }}>
                 {{ with .Params.Icon }}
