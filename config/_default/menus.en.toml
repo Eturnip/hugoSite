@@ -15,6 +15,12 @@
 #  pageRef = "posts"
 #  weight = 10
 
+[[main]]
+  name = "Best Games"
+  url = "/best-games/"
+  weight = 2
+  pre = "fa-ranking-star"
+
 #[[main]]
 #  name = "Parent"
 #  weight = 20
