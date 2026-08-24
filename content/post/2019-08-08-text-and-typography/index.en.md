@@ -9,7 +9,7 @@ tags:
   - notes
 ---
 
-This page was left behind from the original starter template and has been replaced with a neutral reference for the current site.
+This page is a short note about keeping posts readable and structured over time.
 
 The focus of the blog is on clear writing, design experiments, and practical notes from making things.
 

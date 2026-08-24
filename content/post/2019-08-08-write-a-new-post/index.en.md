@@ -1,9 +1,3 @@
-categories: [Animal, Insect]
-tags: [bee]
-author: <author_id>                     # for single entry
-authors: [<author1_id>, <author2_id>]   # for multiple entries
-description: Short summary of the post.
-toc: false
 ---
 title: Writing notes in public
 date: 2019-08-08
@@ -13,110 +7,15 @@ tags:
   - process
 ---
 
-This is a placeholder post to remove the old starter-template copy from the site and keep the content focused on the actual blog.
+This post is a reminder that the site is meant to hold small, useful notes rather than generic template content.
 
-In practice, the writing here is meant to capture experiments, project notes, and small lessons from iteration.
+In practice, the writing here captures experiments, project notes, and small lessons from iteration.
 
 ## The goal
 
 - keep notes in a readable format
 - record what changed and why
 - make the work easier to revisit later
-
-```markdown
-![Light mode only](/path/to/light-mode.png)
-{ .light }
-![Dark mode only](/path/to/dark-mode.png)
-{ .dark }
-```
-
-#### Shadow
-
-The screenshots of the program window can be considered to show the shadow effect:
-
-```markdown
-![Desktop View](/assets/img/sample/mockup.png)
-{ .shadow }
-```
-
-#### Preview Image
-
-If you want to add an image at the top of the post, please provide an image with a resolution of `1200 x 630`. Please note that if the image aspect ratio does not meet `1.91 : 1`, the image will be scaled and cropped.
-
-Knowing these prerequisites, you can start setting the image's attribute:
-
-```yaml
----
-image: /path/to/image
----
-```
-
-Note that the [`media_subpath`](#url-prefix) can also be passed to the preview image, that is, when it has been set, the attribute `path` only needs the image file name.
-
-
-### Video
-
-#### Social Media Platform
-
-You can embed videos from social media platforms with the following syntax:
-
-```hugo
-{{</* embed/{Platform}.html id="{ID}" */>}}
-```
-
-Where `Platform` is the lowercase of the platform name, and `ID` is the video ID.
-
-The following table shows how to get the two parameters we need in a given video URL, and you can also know the currently supported video platforms.
-
-| Video URL                                                                                          | Platform   | ID             |
-| -------------------------------------------------------------------------------------------------- | ---------- | :------------- |
-| [https://www.**youtube**.com/watch?v=**H-B46URT4mg**](https://www.youtube.com/watch?v=H-B46URT4mg) | `youtube`  | `H-B46URT4mg`  |
-| [https://www.**twitch**.tv/videos/**1634779211**](https://www.twitch.tv/videos/1634779211)         | `twitch`   | `1634779211`   |
-| [https://www.**bilibili**.com/video/**BV1Q44y1B7Wf**](https://www.bilibili.com/video/BV1Q44y1B7Wf) | `bilibili` | `BV1Q44y1B7Wf` |
-
-#### Video Files
-
-If you want to embed a video file directly, use the following syntax:
-
-```hugo
-{{</* embed/video.html src="{URL}" */>}}
-```
-
-Where `URL` is a URL to a video file e.g. `/path/to/sample/video.mp4`.
-
-You can also specify additional attributes for the embedded video file. Here is a full list of attributes allowed.
-
-- `poster='/path/to/poster.png'` — poster image for a video that is shown while video is downloading
-- `title='Text'` — title for a video that appears below the video and looks same as for images
-- `autoplay=true` — video automatically begins to play back as soon as it can
-- `loop=true` — automatically seek back to the start upon reaching the end of the video
-- `muted=true` — audio will be initially silenced
-- `types` — specify the extensions of additional video formats separated by `|`. Ensure these files exist in the same directory as your primary video file.
-
-Consider an example using all of the above:
-
-```liquid
-{{</*
-  embed/video.html
-  src="/path/to/video.mp4"
-  types="ogg|mov"
-  poster="poster.png"
-  title="Demo video"
-  autoplay=true
-  loop=true
-  muted=true
-*/>}}
-```
-
-### Audios
-
-If you want to embed an audio file directly, use the following syntax:
-
-```liquid
-{{</*  embed/audio.html src="{URL}" */>}}
-```
-
-Where `URL` is a URL to an audio file e.g. `/path/to/audio.mp3`.
 
 You can also specify additional attributes for the embedded audio file. Here is a full list of attributes allowed.
 

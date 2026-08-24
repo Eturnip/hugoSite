@@ -123,7 +123,7 @@ fi;
 
 ### 特定文件名
 
-```sass {file="_sass/jekyll-theme-chirpy.scss"}
+```sass {file="_sass/theme.scss"}
 @import
   "colors/light-typography",
   "colors/dark-typography";
