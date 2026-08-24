@@ -1,8 +1,8 @@
 # -- Site Configuration --
 # Refer to the theme docs for more details about each of these parameters.
-# https://blowfish.page/docs/getting-started/
+# https://github.com/CaiJimmy/hugo-theme-stack
 
-# theme = "blowfish" # UNCOMMENT THIS LINE
+theme = "hugo-theme-stack-4.0.3"
 # baseURL = "https://your_domain.com/"
 defaultContentLanguage = "en"
 
@@ -19,7 +19,11 @@ enableEmoji = true
 # googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
-  pagerSize = 100
+  pagerSize = 5
+
+[permalinks]
+    post = "/p/:slug/"
+    page = "/:slug/"
 
 [imaging]
   anchor = 'Center'
