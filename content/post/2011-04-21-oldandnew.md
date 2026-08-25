@@ -1,6 +1,6 @@
 ---
 categories: ["Blog"]
-date: "2011-04-21T00:00:00Z"
+date: 2011-04-21T00:00:00Z
 title: old and new
 author: Owen McManus
 ---

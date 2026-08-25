@@ -1,6 +1,6 @@
 ---
 categories: ["Blog"]
-date: "2011-05-11T00:00:00Z"
+date: 2011-05-11T00:00:00Z
 title: Experiments
 author: Owen McManus
 ---

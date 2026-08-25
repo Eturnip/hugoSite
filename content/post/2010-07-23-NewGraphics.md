@@ -1,6 +1,6 @@
 ---
 categories: ["Blog"]
-date: "2010-07-23T00:00:00Z"
+date: 2010-07-23T00:00:00Z
 title: New Graphics
 author: Owen McManus
 ---

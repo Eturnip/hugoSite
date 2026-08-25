@@ -1,6 +1,6 @@
 ---
 categories: ["Blog"]
-date: "2010-10-13T00:00:00Z"
+date: 2010-10-13T00:00:00Z
 title: Space Invaders!
 author: Owen McManus
 ---

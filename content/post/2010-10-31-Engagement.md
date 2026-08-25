@@ -1,6 +1,6 @@
 ---
 categories: ["Blog"]
-date: "2010-10-31T00:00:00Z"
+date: 2010-10-31T00:00:00Z
 title: Engagement
 author: Owen McManus
 ---

@@ -1,6 +1,6 @@
 ---
 categories: ["Blog"]
-date: "2012-06-19T00:00:00Z"
+date: 2012-06-19T00:00:00Z
 title: Game Characters are Assholes
 author: Owen McManus
 ---

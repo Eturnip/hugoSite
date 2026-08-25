@@ -1,6 +1,6 @@
 ---
 categories: ["Blog"]
-date: "2011-06-22T00:00:00Z"
+date: 2011-06-22T00:00:00Z
 title: The Brokenest Build
 author: Owen McManus
 ---

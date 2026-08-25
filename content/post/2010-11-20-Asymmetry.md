@@ -1,6 +1,6 @@
 ---
 categories: ["Blog"]
-date: "2010-11-20T00:00:00Z"
+date: 2010-11-20T00:00:00Z
 title: Asymmetry
 author: Owen McManus
 ---

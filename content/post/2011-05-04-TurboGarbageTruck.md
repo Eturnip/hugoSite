@@ -1,6 +1,6 @@
 ---
 categories: ["Blog"]
-date: "2011-05-04T00:00:00Z"
+date: 2011-05-04T00:00:00Z
 title: TurboGarbageTruck
 author: Owen McManus
 ---
