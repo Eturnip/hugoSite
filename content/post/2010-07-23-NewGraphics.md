@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2010-07-23T00:00:00Z
-title: New Graphics
+layout: post
+title: "New Graphics"
+date: 2010-07-23T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

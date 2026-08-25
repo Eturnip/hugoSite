@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2010-10-16T00:00:00Z
-title: quick aside
+layout: post
+title: "quick aside"
+date: 2010-10-16T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

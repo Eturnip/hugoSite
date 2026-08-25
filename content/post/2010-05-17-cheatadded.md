@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2010-05-17T00:00:00Z
-title: cheat added
+layout: post
+title: "cheat added"
+date: 2010-05-17T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

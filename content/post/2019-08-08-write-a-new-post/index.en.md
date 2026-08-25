@@ -1,8 +1,8 @@
 ---
-title: Writing notes in public
+layout: post
+title: "Writing notes in public"
 date: 2019-08-08
-categories:
-  - Writing
+categories: Writing
 tags:
   - process
 ---

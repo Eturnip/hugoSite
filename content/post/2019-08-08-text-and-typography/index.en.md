@@ -1,12 +1,11 @@
 ---
-title: Notes on typography and structure
+layout: post
+title: "Notes on typography and structure"
 date: 2019-08-08
-draft: false
-description: Notes about writing cleanly, iterating on structure, and making posts readable.
-categories:
-  - Writing
+categories: Writing
 tags:
   - notes
+description: Notes about writing cleanly, iterating on structure, and making posts readable.
 ---
 
 This page is a short note about keeping posts readable and structured over time.

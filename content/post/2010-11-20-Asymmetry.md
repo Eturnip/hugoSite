@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2010-11-20T00:00:00Z
-title: Asymmetry
+layout: post
+title: "Asymmetry"
+date: 2010-11-20T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

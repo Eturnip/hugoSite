@@ -1,12 +1,11 @@
 ---
-title: Getting started with the site
+layout: post
+title: "Getting started with the site"
 date: 2019-08-09
-draft: false
-description: Notes on how this site is organized and what the content is meant to be.
-categories:
-  - Writing
+categories: Writing
 tags:
   - process
+description: Notes on how this site is organized and what the content is meant to be.
 ---
 
 This content is intentionally plain; it is meant to document the site itself rather than serve as a template from a different theme.

@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2011-10-24T00:00:00Z
-title: Sculpting
+layout: post
+title: "Sculpting"
+date: 2011-10-24T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

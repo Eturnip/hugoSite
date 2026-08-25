@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2011-04-21T00:00:00Z
-title: old and new
+layout: post
+title: "old and new"
+date: 2011-04-21T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

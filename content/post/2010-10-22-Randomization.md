@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2010-10-22T00:00:00Z
-title: Randomization
+layout: post
+title: "Randomization"
+date: 2010-10-22T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

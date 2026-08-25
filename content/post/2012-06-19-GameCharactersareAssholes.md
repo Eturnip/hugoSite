@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2012-06-19T00:00:00Z
-title: Game Characters are Assholes
+layout: post
+title: "Game Characters are Assholes"
+date: 2012-06-19T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

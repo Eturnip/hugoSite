@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2011-06-22T00:00:00Z
-title: The Brokenest Build
+layout: post
+title: "The Brokenest Build"
+date: 2011-06-22T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2010-10-31T00:00:00Z
-title: Engagement
+layout: post
+title: "Engagement"
+date: 2010-10-31T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

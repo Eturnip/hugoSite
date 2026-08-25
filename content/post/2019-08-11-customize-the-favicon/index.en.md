@@ -1,11 +1,11 @@
 ---
-title: On visual identity
+layout: post
+title: "On visual identity"
 date: 2019-08-11
-description: A small note about keeping the blog visually consistent without carrying template artifacts forward.
-categories:
-  - Writing
+categories: Writing
 tags:
   - design
+description: A small note about keeping the blog visually consistent without carrying template artifacts forward.
 ---
 
 This site keeps its visual identity intentionally simple so the work remains readable and the themes do not distract from the writing.

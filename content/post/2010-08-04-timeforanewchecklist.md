@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2010-08-04T00:00:00Z
-title: time for a new checklist
+layout: post
+title: "time for a new checklist"
+date: 2010-08-04T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

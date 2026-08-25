@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2011-06-02T00:00:00Z
-title: Truck sketch
+layout: post
+title: "Truck sketch"
+date: 2011-06-02T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

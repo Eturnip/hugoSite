@@ -1,16 +1,11 @@
 ---
-title: 文本和排版
+layout: post
+title: "文本和排版"
 date: 2019-08-08 11:33:00 +0800
-draft: false
+categories: 博客
+tags:
+  - 排版
 description: >-
-  文本、排版、数学公式、图表、流程图、图片、视频等示例。
-categories:
-  - 博客
-  - 演示
-tags: ["- 排版"]
-pin: true
-math: true
-image: devices-mockup.png
 ---
 
 ## 标题

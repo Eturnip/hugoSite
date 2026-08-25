@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2010-05-03T00:00:00Z
-title: more tweaks
+layout: post
+title: "more tweaks"
+date: 2010-05-03T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 

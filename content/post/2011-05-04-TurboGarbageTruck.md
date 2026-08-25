@@ -1,7 +1,8 @@
 ---
-categories: ["Blog"]
-date: 2011-05-04T00:00:00Z
-title: TurboGarbageTruck
+layout: post
+title: "TurboGarbageTruck"
+date: 2011-05-04T00:00:00
+categories: Blog
 author: Owen McManus
 ---
 
