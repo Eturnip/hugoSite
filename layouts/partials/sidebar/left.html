@@ -55,7 +55,17 @@
         {{ $active := or (eq $currentPage.RelPermalink .URL) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
         {{ $href := .URL }}
         {{- if eq .Name "Best Games" }}
-            {{- $href = "/best-games/" }}
+            {{- with .PageRef }}
+                {{- $page := $.Site.GetPage . }}
+                {{- if $page }}
+                    {{- $href = $page.RelPermalink }}
+                    {{- if eq $page.RelPermalink $currentPage.RelPermalink }}
+                        {{- $active = true }}
+                    {{- end }}
+                {{- end }}
+            {{- else }}
+                {{- $href = .URL }}
+            {{- end }}
         {{- end }}
         <li {{ if $active }} class='current'{{ end }}>
             <a href='{{ $href }}' {{ if .Params.newTab }}target="_blank"{{ end }}>
