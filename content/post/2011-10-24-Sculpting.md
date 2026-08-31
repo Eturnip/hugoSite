@@ -6,21 +6,20 @@ categories: Blog
 author: Owen McManus
 ---
 
-<div class="blog-content">
-				<div class="paragraph" style='text-align:left;'><a href="http://www.pixologic.com/sculptris/" style="">Sculptris</a>&nbsp;has been around for a little bit, but I decided to be all late to the game and whatnot, so I just tried it a couple days ago. About a half hour after downloading it I made this.<br></div>  <div><div class="wsite-image wsite-image-border-border-width:0 " style="padding-top:10px;padding-bottom:10px;margin-left:10px;margin-right:10px;text-align:center">
- <a>
- <img src="/uploads/1338422875.jpg" alt="Picture" style="width:auto;max-width:100%">
- </a>
- <div style="display:block;font-size:90%"></div>
- </div></div>  <div class="paragraph" style='text-align:left;'>15 minutes later it looked like this.</div>  <div><div class="wsite-image wsite-image-border-border-width:0 " style="padding-top:10px;padding-bottom:10px;margin-left:10px;margin-right:10px;text-align:center">
- <a>
- <img src="/uploads/1338422813.jpg" alt="Picture" style="width:auto;max-width:100%">
- </a>
- <div style="display:block;font-size:90%"></div>
- </div></div>  <div class="paragraph" style='text-align:left;'>Then I did this in 40 minutes. The video is only about 2 minutes. I just sped up the recording to&nbsp;tolerable&nbsp;levels.<br></div>  <div style='margin-top:10px;margin-bottom:10px;'><div style="text-align: center;"><object width="350" height="289"><param name="movie" value="https://www.youtube.com/v/-Ga0Ag78_os"><param name="wmode" value="transparent"><param name="allownetworking" value="internal"><embed src="https://www.youtube.com/v/-Ga0Ag78_os" type="application/x-shockwave-flash" allownetworking="internal" wmode="transparent" width="350" height="289"></object></div></div>  <div class="paragraph" style='text-align:left;'>Sure, they aren't stellar sculptures. Unfinished sketches really. I had no plan when I started each of these, I was just messing around with the tools, trying to see what I could do with them. My experience was absolutely frictionless.<br><br>I love discovering new tools. There is always that crusty old man voice in my head remembering how hard all this used to be. How I had to build up models a polygon at a time, or animate without IK. The voice is still there, but it has been getting quieter and quieter. With&nbsp;<a href="http://unity3d.com/" title="" style="">Unity3D</a>,&nbsp;<a href="http://www.blender.org/" title="" style="">Blender</a>&nbsp;(now that they have a sensible UI),&nbsp;<a href="http://nevercenter.com/silo/" title="" style="">Silo</a>,&nbsp;<a href="http://www.gimp.org/" title="" style="">Gimp</a>, etc. the tools have never been better or easier to use, and now a lot of them are affordable, or even free. Did I mention that Sculptris is free. Sometimes I feel like I could just mash my hand on the keyboad and, something cool will pop up on screen. The crusty old man voice wants to hate that, but honestly, tools like these, are just to awesome to hate.&nbsp;&nbsp;<br></div>
+<a href="http://www.pixologic.com/sculptris/" style="">Sculptris</a> has been around for a little bit, but I decided to be all late to the game and whatnot, so I just tried it a couple days ago. About a half hour after downloading it I made this.
 
-		</div>
-        
+<div><div class="wsite-image wsite-image-border-border-width:0 " style="padding-top:10px;padding-bottom:10px;margin-left:10px;margin-right:10px;text-align:center">
+<a>
+<img src="/uploads/1338422875.jpg" alt="Picture" style="width:auto;max-width:100%">
+</a>
+<div style="display:block;font-size:90%">
+15 minutes later it looked like this.  <div><div class="wsite-image wsite-image-border-border-width:0 " style="padding-top:10px;padding-bottom:10px;margin-left:10px;margin-right:10px;text-align:center">
+<a>
+<img src="/uploads/1338422813.jpg" alt="Picture" style="width:auto;max-width:100%">
+</a>
+<div style="display:block;font-size:90%">
+Then I did this in 40 minutes. The video is only about 2 minutes. I just sped up the recording to tolerable levels.
 
+<div style='margin-top:10px;margin-bottom:10px;'><div style="text-align: center;"><object width="350" height="289"><param name="movie" value="https://www.youtube.com/v/-Ga0Ag78_os"><param name="wmode" value="transparent"><param name="allownetworking" value="internal"><embed src="https://www.youtube.com/v/-Ga0Ag78_os" type="application/x-shockwave-flash" allownetworking="internal" wmode="transparent" width="350" height="289"></object>  Sure, they aren't stellar sculptures. Unfinished sketches really. I had no plan when I started each of these, I was just messing around with the tools, trying to see what I could do with them. My experience was absolutely frictionless.
 
-
+I love discovering new tools. There is always that crusty old man voice in my head remembering how hard all this used to be. How I had to build up models a polygon at a time, or animate without IK. The voice is still there, but it has been getting quieter and quieter. With <a href="http://unity3d.com/" title="" style="">Unity3D</a>, <a href="http://www.blender.org/" title="" style="">Blender</a> (now that they have a sensible UI), <a href="http://nevercenter.com/silo/" title="" style="">Silo</a>, <a href="http://www.gimp.org/" title="" style="">Gimp</a>, etc. the tools have never been better or easier to use, and now a lot of them are affordable, or even free. Did I mention that Sculptris is free. Sometimes I feel like I could just mash my hand on the keyboad and, something cool will pop up on screen. The crusty old man voice wants to hate that, but honestly, tools like these, are just to awesome to hate.
