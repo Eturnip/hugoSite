@@ -22,13 +22,26 @@
     <ul class="nav">
       {{ range .Site.Menus.main }}
         {{ $active := false }}
-        {{ if eq (.URL) $.RelPermalink }}
-          {{ $active = true }}
-        {{ end }}
         {{ $href := .URL }}
+        
         {{ if eq .Name "Best Games" }}
-          {{ $href = "/best-games/" }}
+          {{ with .PageRef }}
+            {{ $page := $.Site.GetPage . }}
+            {{ if $page }}
+              {{ $href = $page.RelPermalink }}
+              {{ if eq $page.RelPermalink $.RelPermalink }}
+                {{ $active = true }}
+              {{ end }}
+            {{ end }}
+          {{ else }}
+            {{ $href = .URL }}
+          {{ end }}
+        {{ else }}
+          {{ if eq $href $.RelPermalink }}
+            {{ $active = true }}
+          {{ end }}
         {{ end }}
+        
         <li class="nav-item{{ if $active }} active{{ end }}">
           <a href="{{ $href }}" class="nav-link">
             <i class="fa-fw fas {{ .Pre }}"></i>
