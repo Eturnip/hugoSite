@@ -12,7 +12,6 @@ favicon        = "img/avatar.png"
     lastUpdated = ":date_full"
 
 [sidebar]
-    emoji    = "✏️"
     subtitle = "A personal blog about games and code"
     avatar   = "img/avatar.png"
 
