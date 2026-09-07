@@ -1,7 +1,21 @@
 {{- $scope := default "homepage" .Scope -}}
 {{- $context := .Context -}}
-{{- with (index .Context.Site.Params.widgets $scope) -}}
-    <aside class="sidebar right-sidebar sticky">
+<aside class="sidebar right-sidebar sticky">
+    {{- $query := first 1 (where .Context.Site.Pages "Layout" "==" "search") -}}
+    {{- if $query -}}
+        {{- $searchPage := index $query 0 -}}
+        <form action="{{ $searchPage.RelPermalink }}" class="search-form widget" {{ with .Context.OutputFormats.Get "json" -}}data-json="{{ .RelPermalink }}" {{- end }}>
+            <p>
+                <label>{{ T "search.title" }}</label>
+                <input name="keyword" required placeholder="{{ T `search.placeholder` }}" />
+                <button title="{{ T `search.title` }}">
+                    {{ partial "helper/icon" "search" }}
+                </button>
+            </p>
+        </form>
+    {{- end -}}
+
+    {{- with (index .Context.Site.Params.widgets $scope) -}}
         {{ range $widget := . }}
             {{ if templates.Exists (printf "_partials/widget/%s.html" .type) }}
                 <!-- Ensure that the `params` is not nil -->
@@ -12,5 +26,5 @@
                 {{ warnf "Widget %s not found" .type }}
             {{ end }}
         {{ end }}
-    </aside>
-{{ end }}
+    {{ end }}
+</aside>
