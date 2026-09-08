@@ -13,7 +13,7 @@ favicon        = "img/avatar.png"
 
 [sidebar]
     subtitle = "A personal blog about games and code"
-    avatar   = "img/avatar.png"
+    avatar   = "img/commons/avatar.png"
 
 [article]
     [article.license]

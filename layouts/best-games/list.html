@@ -35,6 +35,49 @@
   {{ end }}
   {{ $pages = sort $pages "Date" "desc" }}
 
+  <style>
+    #page-tag h1 {
+      color: var(--card-text-color-main);
+    }
+
+    #page-tag h1 i,
+    #page-tag h1 .lead {
+      color: var(--card-text-color-tertiary);
+    }
+
+    #page-tag .best-games-entry {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    #page-tag .best-games-entry-title {
+      color: var(--card-text-color-main);
+      text-decoration: none;
+      min-width: 0;
+      flex: 0 1 auto;
+    }
+
+    #page-tag .best-games-entry-title:hover {
+      color: var(--accent-color);
+    }
+
+    #page-tag .best-games-entry-dash {
+      border-bottom: 1px dashed var(--card-text-color-tertiary);
+      opacity: 0.6;
+      min-width: 1.5rem;
+      flex: 1 1 auto;
+      transform: translateY(-0.1em);
+    }
+
+    #page-tag .best-games-entry-date {
+      color: var(--card-text-color-tertiary);
+      text-align: right;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+  </style>
+
   <div id="page-tag">
     <h1 class="ps-lg-2">
       <i class="fa fa-trophy fa-fw text-muted"></i>
@@ -43,12 +86,16 @@
     </h1>
     <ul class="content ps-0">
       {{ range $pages }}
-        <li class="d-flex justify-content-between px-md-3">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          <span class="dash flex-grow-1"></span>
-          {{ partial "datetime.html" (dict "date" .Date "class" "text-muted small text-nowrap") }}
+        <li class="best-games-entry px-md-3">
+          <a class="best-games-entry-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <span class="best-games-entry-dash" aria-hidden="true"></span>
+          {{ partial "datetime.html" (dict "date" .Date "class" "best-games-entry-date") }}
         </li>
       {{ end }}
     </ul>
   </div>
+{{ end }}
+
+{{ define "right-sidebar" }}
+  {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
 {{ end }}
