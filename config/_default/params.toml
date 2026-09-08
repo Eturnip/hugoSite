@@ -12,7 +12,7 @@ favicon        = "img/avatar.png"
     lastUpdated = ":date_full"
 
 [sidebar]
-    subtitle = "A personal blog about games and code"
+    subtitle = "Words and Pictures. Mostly about Games."
     avatar   = "img/commons/avatar.png"
 
 [article]
