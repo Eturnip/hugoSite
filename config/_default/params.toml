@@ -37,3 +37,12 @@ favicon        = "img/avatar.png"
 
 [comments]
     enabled = false
+
+[social]
+    # List of social media links shown in sidebar
+    # links = [
+    #     { type = "github", id = "username", icon = "fab fa-github" },
+    #     { type = "twitter", id = "username", icon = "fab fa-twitter" },
+    #     { type = "email", id = "user@example.com", icon = "fas fa-envelope" },
+    # ]
+    links = []

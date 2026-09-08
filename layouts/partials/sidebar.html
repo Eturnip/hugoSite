@@ -59,17 +59,17 @@
   </nav>
 
   <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-    {{ if not .Site.Params.themeMode }}
+    {{ if (default true .Site.Params.colorScheme.toggle) }}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
         <i class="fas fa-adjust"></i>
       </button>
 
-      {{ if .Site.Params.social.links }}
+      {{ if (index .Site.Params.social 0) }}
         <span class="icon-border"></span>
       {{ end }}
     {{ end }}
 
-    {{ range .Site.Params.social.links }}
+    {{ with .Site.Params.social.links }}{{ range . }}
       {{ $url := "" }}
       {{ $rel := "" }}
 
@@ -95,6 +95,6 @@
           <i class="{{ .icon }}"></i>
         </a>
       {{ end }}
-    {{ end }}
+    {{ end }}{{ end }}
   </div>
 </aside>
