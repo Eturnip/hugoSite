@@ -23,6 +23,12 @@
         {{ $hasTag = true }}
       {{ end }}
     {{ end }}
+    {{ if and (not $hasTag) .Title }}
+      {{ $titleLower := lower .Title }}
+      {{ if strings.HasPrefix $titleLower "best games -" }}
+        {{ $hasTag = true }}
+      {{ end }}
+    {{ end }}
     {{ if $hasTag }}
       {{ $pages = $pages | append . }}
     {{ end }}
