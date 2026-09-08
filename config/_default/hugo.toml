@@ -3,7 +3,7 @@
 # https://github.com/CaiJimmy/hugo-theme-stack
 
 theme = "hugo-theme-stack"
-baseURL = "/"
+baseURL = "https://eturnip.com"
 relativeURLs = true
 canonifyURLs = false
 defaultContentLanguage = "en"
