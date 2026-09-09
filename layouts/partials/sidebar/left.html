@@ -49,61 +49,67 @@
         </ol>
     {{- end -}}
 
-    <ol class="menu" id="main-menu">
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-        {{ $active := or (eq $currentPage.RelPermalink .URL) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
-        {{ $href := .URL }}
-        {{- if eq .Name "Best Games" }}
-            {{- with .PageRef }}
-                {{- $page := $.Site.GetPage . }}
-                {{- if $page }}
-                    {{- $href = $page.RelPermalink }}
-                    {{- if eq $page.RelPermalink $currentPage.RelPermalink }}
-                        {{- $active = true }}
+    <section class="widget menu-widget">
+        <div class="widget-icon">
+            {{ partial "helper/icon" "menu" }}
+        </div>
+        <h2 class="widget-title">MENU</h2>
+        <ol class="menu widget-menu--list" id="main-menu">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            {{ $active := or (eq $currentPage.RelPermalink .URL) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
+            {{ $href := .URL }}
+            {{- if eq .Name "Best Games" }}
+                {{- with .PageRef }}
+                    {{- $page := $.Site.GetPage . }}
+                    {{- if $page }}
+                        {{- $href = $page.RelPermalink }}
+                        {{- if eq $page.RelPermalink $currentPage.RelPermalink }}
+                            {{- $active = true }}
+                        {{- end }}
                     {{- end }}
+                {{- else }}
+                    {{- $href = .URL }}
                 {{- end }}
-            {{- else }}
-                {{- $href = .URL }}
             {{- end }}
-        {{- end }}
-        <li {{ if $active }} class='current'{{ end }}>
-            <a href='{{ $href }}' {{ if .Params.newTab }}target="_blank"{{ end }}>
-                {{ with .Params.Icon }}
-                    {{ partial "helper/icon" . }}
-                {{ end }}
-                <span>{{- .Name -}}</span>
-            </a>
-        </li>
-        {{ end }}
-        <li class="menu-bottom-section">
-            <ol class="menu">
-                {{- $currentLanguageCode := .Language.Name -}}
-                {{ if hugo.IsMultilingual }}
-                    <li id="i18n-switch">  
-                        {{ partial "helper/icon" "language" }}
-                        <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
-                            {{ range .Site.Home.AllTranslations }}
-                                {{ $target := . }}
-                                {{ range $.AllTranslations }}
-                                    {{ if eq .Language.Name $target.Language.Name }}
-                                        {{ $target = . }}
+            <li {{ if $active }} class='current'{{ end }}>
+                <a href='{{ $href }}' {{ if .Params.newTab }}target="_blank"{{ end }}>
+                    {{ with .Params.Icon }}
+                        {{ partial "helper/icon" . }}
+                    {{ end }}
+                    <span>{{- .Name -}}</span>
+                </a>
+            </li>
+            {{ end }}
+            <li class="menu-bottom-section">
+                <ol class="menu">
+                    {{- $currentLanguageCode := .Language.Name -}}
+                    {{ if hugo.IsMultilingual }}
+                        <li id="i18n-switch">  
+                            {{ partial "helper/icon" "language" }}
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                {{ range .Site.Home.AllTranslations }}
+                                    {{ $target := . }}
+                                    {{ range $.AllTranslations }}
+                                        {{ if eq .Language.Name $target.Language.Name }}
+                                            {{ $target = . }}
+                                        {{ end }}
                                     {{ end }}
+                                    <option value="{{ $target.RelPermalink }}" {{ if eq $target.Language.Name $currentLanguageCode }}selected{{ end }}>{{ .Language.Label }}</option>
                                 {{ end }}
-                                <option value="{{ $target.RelPermalink }}" {{ if eq $target.Language.Name $currentLanguageCode }}selected{{ end }}>{{ .Language.Label }}</option>
-                            {{ end }}
-                        </select>
-                    </li>
-                {{ end }}
+                            </select>
+                        </li>
+                    {{ end }}
 
-                {{ if .Site.Params.colorScheme.toggle }}
-                    <li id="dark-mode-toggle">
-                        {{ partial "helper/icon" "toggle-left" }}
-                        {{ partial "helper/icon" "toggle-right" }}
-                        <span>{{ T "darkMode" }}</span>
-                    </li>
-                {{ end }}
-            </ol>
-        </li>
-    </ol>
+                    {{ if .Site.Params.colorScheme.toggle }}
+                        <li id="dark-mode-toggle">
+                            {{ partial "helper/icon" "toggle-left" }}
+                            {{ partial "helper/icon" "toggle-right" }}
+                            <span>{{ T "darkMode" }}</span>
+                        </li>
+                    {{ end }}
+                </ol>
+            </li>
+        </ol>
+    </section>
 </aside>
