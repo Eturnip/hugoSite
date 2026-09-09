@@ -13,10 +13,16 @@
     </h1>
     <ul class="content ps-0">
       {{ range .Pages }}
-        <li class="d-flex justify-content-between px-md-3">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          <span class="dash flex-grow-1"></span>
-          {{ partial "datetime.html" (dict "date" .Date "lang" $lang "class" "text-muted small text-nowrap") }}
+        <li class="d-flex flex-column px-md-3 py-2">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <a href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong></a>
+            <span class="text-muted small text-nowrap ms-2">{{ .Date.Format "2006-01-02" }}</span>
+          </div>
+          {{ if .Summary }}
+            <div class="text-muted small line-clamp-2" style="font-size: 0.9rem; line-height: 1.4;">
+              {{ .Summary | plainify }}
+            </div>
+          {{ end }}
         </li>
       {{ end }}
     </ul>

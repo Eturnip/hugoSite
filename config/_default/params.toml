@@ -7,6 +7,9 @@ favicon        = "img/avatar.png"
 [footer]
     since = 2020
 
+[list]
+    showSummary = true
+
 [dateFormat]
     published = ":date_full"
     lastUpdated = ":date_full"
