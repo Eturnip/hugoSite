@@ -11,4 +11,8 @@
 {{- end -}}
 {{- $value := time.AsTime $date -}}
 {{- $formatted := $value.Format "Jan 2, 2006" -}}
+{{- if eq .class "" -}}
+<span>{{ $formatted }}</span>
+{{- else -}}
 <span class="{{ .class | default "text-muted small text-nowrap" }}">{{ $formatted }}</span>
+{{- end -}}
