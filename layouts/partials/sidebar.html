@@ -19,43 +19,49 @@
   </header>
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
-    <ul class="nav">
-      {{ range .Site.Menus.main }}
-        {{ $active := false }}
-        {{ $href := .URL }}
-        
-        {{ if eq .Name "Best Games" }}
-          {{ with .PageRef }}
-            {{ $page := $.Site.GetPage . }}
-            {{ if $page }}
-              {{ $href = $page.RelPermalink }}
-              {{ if eq $page.RelPermalink $.RelPermalink }}
-                {{ $active = true }}
+    <div class="widget menu-widget">
+      <div class="widget-menu--list">
+        {{ range .Site.Menus.main }}
+          {{ $active := false }}
+          {{ $href := .URL }}
+          
+          {{ if eq .Name "Best Games" }}
+            {{ with .PageRef }}
+              {{ $page := $.Site.GetPage . }}
+              {{ if $page }}
+                {{ $href = $page.RelPermalink }}
+                {{ if eq $page.RelPermalink $.RelPermalink }}
+                  {{ $active = true }}
+                {{ end }}
               {{ end }}
+            {{ else }}
+              {{ $href = .URL }}
             {{ end }}
           {{ else }}
-            {{ $href = .URL }}
+            {{ if eq $href $.RelPermalink }}
+              {{ $active = true }}
+            {{ end }}
           {{ end }}
-        {{ else }}
-          {{ if eq $href $.RelPermalink }}
-            {{ $active = true }}
-          {{ end }}
+          
+          <div class="menu-item{{ if $active }} active{{ end }}">
+            <a href="{{ $href }}">
+              <i class="fa-fw fas {{ .Pre }}"></i>
+              <span>{{ .Name | upper }}</span>
+            </a>
+          </div>
         {{ end }}
-        
-        <li class="nav-item{{ if $active }} active{{ end }}">
-          <a href="{{ $href }}" class="nav-link">
-            <i class="fa-fw fas {{ .Pre }}"></i>
-            <span>{{ .Name | upper }}</span>
+      </div>
+    </div>
+    <div class="widget menu-widget mt-4">
+      <div class="widget-menu--list">
+        <div class="menu-item">
+          <a class="no-hover">
+            <i class="fa-fw fas fa-language"></i>
+            {{ partial "language-selector.html" . }}
           </a>
-        </li>
-      {{ end }}
-      <li class="nav-item mt-4">
-        <a class="nav-link no-hover">
-          <i class="fa-fw fas fa-language"></i>
-          {{ partial "language-selector.html" . }}
-        </a>
-      </li>
-    </ul>
+        </div>
+      </div>
+    </div>
   </nav>
 
   <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">

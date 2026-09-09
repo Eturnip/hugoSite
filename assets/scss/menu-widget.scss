@@ -1,6 +1,5 @@
-/* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
-
 /* Menu widget styling to match archives widget */
+
 .menu-widget {
     .widget-menu--list {
         @include card-style;
