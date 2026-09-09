@@ -28,6 +28,10 @@
         {{ end }}
     </div>
 
+    {{ if and $IsList $Page.Summary }}
+    <p class="article-summary">{{ $Page.Summary | plainify }}</p>
+    {{ end }}
+
     {{ $showReadingTime := $Page.Params.readingTime | default ($Page.Site.Params.article.readingTime) }}
     {{ $showDate := not $Page.Date.IsZero }}
     {{ $showTime := or $showDate $showReadingTime }}

@@ -1,12 +1,20 @@
 {{ $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) }}
 <article class="{{ if $image }}has-image{{ end }}">
-    {{ partial "article/components/header" (dict "Page" . "IsList" true) }}
-    
-    {{ if or (site.Params.list.showSummary) (.Params.showSummary) }}
-        {{ if .Summary }}
-            <section class="article-content">
-                <p class="article-summary">{{ .Summary | plainify }}</p>
-            </section>
+    <div class="article-details">
+        <div class="article-title-wrapper" style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <h2 class="article-title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+
+            {{ if not .Date.IsZero }}
+                <div>
+                    <span>{{ .Date | time.Format .Site.Params.dateFormat.published }}</span>
+                </div>
+            {{ end }}
+        </div>
+
+        {{ if and (or (site.Params.list.showSummary) (.Params.showSummary)) .Summary }}
+            <p class="article-summary">{{ .Summary | plainify }}</p>
         {{ end }}
-    {{ end }}
+    </div>
 </article>

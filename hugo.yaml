@@ -1,6 +1,11 @@
 baseURL: https://eturnip.com
 disablePathToLower: true
 locale: en-US
+summaryLength: 30
 title: Eturnip.com
 relativeURLs: true
 canonifyURLs: false
+
+params:
+  list:
+    showSummary: true
