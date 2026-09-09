@@ -1,20 +1,7 @@
 {{- $IsList := .IsList -}}
 {{- $Page := .Page -}}
 <div class="article-details">
-    {{ if $Page.Params.categories }}
-    <header class="article-category">
-        {{ range ($Page.GetTerms "categories") }}
-            {{ if ne .LinkTitle "Blog" }}
-                {{ $color := partial "helper/color-from-str" .LinkTitle }}
-                {{ $BackgroundColor := default $color.BackgroundColor .Params.style.background }}
-                {{ $TextColor := default $color.TextColor .Params.style.color }}
-                <a href="{{ .RelPermalink }}" style="background-color: {{ $BackgroundColor | safeCSS }}; color: {{ $TextColor | safeCSS }};">
-                    {{ .LinkTitle }}
-                </a>
-            {{ end }}
-        {{ end }}
-    </header>
-    {{ end }}
+    {{/* Categories are hidden */}}
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
