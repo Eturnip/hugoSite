@@ -36,8 +36,17 @@
   {{ $pages = sort $pages "Date" "desc" }}
 
   <style>
+    #page-tag {
+      background: var(--card-background);
+      border: 1px solid var(--card-separator-color);
+      border-radius: var(--card-border-radius);
+      box-shadow: var(--card-shadow);
+      padding: var(--small-card-padding);
+    }
+
     #page-tag h1 {
       color: var(--card-text-color-main);
+      margin: 0 0 1.5rem 0;
     }
 
     #page-tag h1 i,
@@ -45,10 +54,21 @@
       color: var(--card-text-color-tertiary);
     }
 
+    #page-tag .best-games-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
     #page-tag .best-games-entry {
       display: flex;
       align-items: baseline;
       gap: 1rem;
+      padding: 0.6rem 0;
+    }
+
+    #page-tag .best-games-entry:not(:last-child) {
+      border-bottom: 1px solid var(--card-separator-color);
     }
 
     #page-tag .best-games-entry-title {
@@ -84,9 +104,9 @@
       Best Games
       <span class="lead text-muted ps-2">{{ len $pages }}</span>
     </h1>
-    <ul class="content ps-0">
+    <ul class="best-games-list">
       {{ range $pages }}
-        <li class="best-games-entry px-md-3">
+        <li class="best-games-entry">
           <a class="best-games-entry-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
           <span class="best-games-entry-dash" aria-hidden="true"></span>
           {{ partial "datetime.html" (dict "date" .Date "class" "best-games-entry-date") }}
