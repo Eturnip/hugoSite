@@ -1,5 +1,12 @@
 {{- $date := .date -}}
 {{- if not $date -}}
+  {{- if .Page -}}
+    {{- $date = .Page.Date -}}
+  {{- else -}}
+    {{- return -}}
+  {{- end -}}
+{{- end -}}
+{{- if (eq $date "") -}}
   {{- return -}}
 {{- end -}}
 {{- $value := time.AsTime $date -}}

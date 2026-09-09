@@ -3,46 +3,29 @@
 <div class="article-details">
     {{/* Categories are hidden */}}
 
-    <div class="article-title-wrapper">
+    {{- $showDate := $Page.Params.showDate | default (.Site.Params.article.showDate | default true) -}}
+    {{- $showUpdated := $Page.Params.showUpdated | default (.Site.Params.article.showUpdated | default true) -}}
+    {{- $showWordCount := $Page.Params.wordCount | default (.Site.Params.article.wordCount | default false) -}}
+    {{- $showReadingTime := $Page.Params.readingTime | default (.Site.Params.article.readingTime | default false) -}}
+
+    <div class="article-title-wrapper" style="display: flex; justify-content: space-between; align-items: flex-start;">
         <h2 class="article-title">
             <a href="{{ $Page.RelPermalink }}">
                 {{- $Page.Title -}}
             </a>
         </h2>
-    </div>
-
-    {{ $author := $Page.Params.author | default ($Page.Site.Params.article.author | default (.Site.Params.author | default "")) }}
-    {{ $authorUrl := $Page.Params.authorUrl | default ($Page.Site.Params.article.authorUrl | default (.Site.Params.authorUrl | default "")) }}
-
-    {{- $showDate := $Page.Params.showDate | default (.Site.Params.article.showDate | default true) -}}
-    {{- $showUpdated := $Page.Params.showUpdated | default (.Site.Params.article.showUpdated | default true) -}}
-    {{- $showAuthor := $Page.Params.showAuthor | default (.Site.Params.article.showAuthor | default true) -}}
-    {{- $showWordCount := $Page.Params.wordCount | default (.Site.Params.article.wordCount | default false) -}}
-    {{- $showReadingTime := $Page.Params.readingTime | default (.Site.Params.article.readingTime | default false) -}}
-
-    <footer class="article-time">
         {{ if or (and $showDate .PublishDate) $showDate }}
             <div>
-                {{ partial "datetime" (dict "Page" $Page "class" "article-time--published") }}
+                {{ partial "datetime" (dict "Page" $Page "class" "") }}
             </div>
         {{ end }}
+    </div>
 
+    <footer class="article-time">
         {{ if and $showUpdated (ne .PublishDate .Lastmod) }}
             <div>
                 {{ partial "datetime" (dict "Page" $Page "class" "article-time--modified" "time" .Lastmod "label" (T "article.lastUpdatedTime")) }}
             </div>
-        {{ end }}
-
-        {{ if $showAuthor }}
-            {{ if $authorUrl }}
-                <div>
-                    <a href="{{ $authorUrl }}" target="_blank" rel="noopener noreferrer">{{ $author }}</a>
-                </div>
-            {{ else if $author }}
-                <div>
-                    {{ $author }}
-                </div>
-            {{ end }}
         {{ end }}
 
         {{ if $showWordCount }}
