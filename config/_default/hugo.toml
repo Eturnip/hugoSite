@@ -21,7 +21,7 @@ enableEmoji = true
 # googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
-  pagerSize = 5
+  pagerSize = 15
 
 [permalinks]
     post = "/p/:slug/"
