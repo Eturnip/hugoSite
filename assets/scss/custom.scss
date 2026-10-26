@@ -35,6 +35,36 @@
 
         .article-list--compact {
             padding: 0 1rem 1rem;
+
+            article > a {
+                width: 100%;
+                display: flex;
+                color: var(--card-text-color-main);
+                text-decoration: none;
+
+                .article-details {
+                    width: 100%;
+                }
+            }
+
+            .article-title,
+            .article-meta,
+            .article-meta time,
+            .article-description {
+                color: var(--card-text-color-main);
+            }
         }
+    }
+}
+
+html[data-scheme="dark"] {
+    .left-sidebar .menu-widget .widget-title,
+    .template-archives .archives-group summary,
+    .article-list--compact article > a,
+    .article-list--compact .article-title,
+    .article-list--compact .article-meta,
+    .article-list--compact .article-meta time,
+    .article-list--compact .article-description {
+        color: rgba(255, 255, 255, 0.9);
     }
 }

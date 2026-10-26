@@ -1,0 +1,41 @@
+<style>
+    .article-list article {
+        cursor: pointer;
+    }
+
+    .article-list article .article-title a,
+    .article-list article .article-subtitle,
+    .article-list article .article-summary,
+    .article-list article .article-meta,
+    .article-list article .article-meta time,
+    .article-list article .article-category a {
+        color: var(--card-text-color-main);
+    }
+
+    html[data-scheme="dark"] {
+        .article-list article .article-title a,
+        .article-list article .article-subtitle,
+        .article-list article .article-summary,
+        .article-list article .article-meta,
+        .article-list article .article-meta time,
+        .article-list article .article-category a {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.article-list article').forEach(function (article) {
+            article.addEventListener('click', function (event) {
+                if (event.target.closest('a, button, input, textarea, select')) {
+                    return;
+                }
+
+                var link = article.querySelector('a[href]');
+                if (link) {
+                    window.location.href = link.href;
+                }
+            });
+        });
+    });
+</script>
