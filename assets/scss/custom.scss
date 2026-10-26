@@ -1,0 +1,40 @@
+.template-archives {
+    .archives-group {
+        margin-bottom: 1.5rem;
+        background: var(--card-background);
+        border: 1px solid var(--card-separator-color);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--card-shadow);
+        overflow: hidden;
+
+        summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 1.4rem 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--card-text-color-main);
+            font-weight: 700;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "▾";
+            font-size: 1.4rem;
+            color: var(--card-text-color-tertiary);
+            transition: transform 0.2s ease;
+        }
+
+        &:not([open]) summary::after {
+            content: "▸";
+        }
+
+        .article-list--compact {
+            padding: 0 1rem 1rem;
+        }
+    }
+}

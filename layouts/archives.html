@@ -1,0 +1,33 @@
+{{ define "body-class" }}template-archives{{ end }}
+{{ define "main" }}
+    <header>
+        {{- $taxonomy := $.Site.GetPage "taxonomyTerm" "categories" -}}
+        {{- $terms := $taxonomy.Pages -}}
+        {{ if $terms }}
+        <h2 class="section-title">{{ T "widget.categoriesCloud.title" }}</h2>
+        <div class="subsection-list">
+            <div class="article-list--tile">
+                {{ range $terms }}
+                    {{ partial "article-list/tile" . }}
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </header>
+
+    {{ $pages := partial "helper/pages.html" .Site.Home }}
+
+    {{ range $index, $yearGroup := $pages.GroupByDate "2006" }}
+    {{ $id := lower (replace $yearGroup.Key " " "-") }}
+    <details class="archives-group" id="{{ $id }}"{{ if eq $index 0 }} open{{ end }}>
+        <summary class="archives-date section-title">{{ $yearGroup.Key }}</summary>
+        <div class="article-list--compact">
+            {{ range $yearGroup.Pages }}
+                {{ partial "article-list/compact" . }}
+            {{ end }}
+        </div>
+    </details>
+    {{ end }}
+
+    {{ partialCached "footer/footer" . }}
+{{ end }}
