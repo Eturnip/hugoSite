@@ -10,4 +10,4 @@ menu:
     pre: fa-info-circle
 ---
 
-This is where I write about games and stories and making things and all the stuff in between
+Hi, I'm Owen McManus and this is where I write about games and stories and making things and all the stuff in between
